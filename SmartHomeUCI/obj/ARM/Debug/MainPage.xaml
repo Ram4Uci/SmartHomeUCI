@@ -7,12 +7,12 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock x:ConnectionId='1' x:Name="Temp" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,800,400" TextWrapping="Wrap" Text="Temperature"/>
-        <TextBlock x:ConnectionId='2' x:Name="Humi" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,400,800,0" TextWrapping="Wrap" Text="Humidity"/>
-        <TextBlock x:ConnectionId='3' x:Name="Pres" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="800,0,0,400" TextWrapping="Wrap" Text="Pressure"/>
-        <TextBlock x:ConnectionId='4' x:Name="Alti" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="800,400,0,0" TextWrapping="Wrap" Text="Altitude"/>
-
+    <Grid Background="Black" >
+        <TextBlock x:ConnectionId='1' x:Name="Temp" Foreground="Blue" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,800,400" TextWrapping="Wrap" Text="Temperature"/>
+        <TextBlock x:ConnectionId='2' x:Name="Humi" Foreground="White" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,400,800,0" TextWrapping="Wrap" Text="Humidity"/>
+        <TextBlock x:ConnectionId='3' x:Name="Pres" Foreground="Green" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="800,0,0,400" TextWrapping="Wrap" Text="Pressure"/>
+        <TextBlock x:ConnectionId='4' x:Name="Alti" Foreground="Yellow" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="800,400,0,0" TextWrapping="Wrap" Text="Altitude"/>
+         
     </Grid>
 </Page>
 

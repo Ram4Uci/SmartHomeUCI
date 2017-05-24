@@ -35,7 +35,7 @@ namespace SmartHomeUCI
             base.OnNavigatedTo(e);
 
             _timer = new DispatcherTimer();
-            _timer.Interval = TimeSpan.FromSeconds(5);
+            _timer.Interval = TimeSpan.FromSeconds(1);
             _timer.Tick += ReadSensor;
             _bme280 = new BuildAzure.IoT.Adafruit.BME280.BME280Sensor();
             await _bme280.Initialize();
@@ -50,10 +50,11 @@ namespace SmartHomeUCI
             var humidity = await _bme280.ReadHumidity();
             var pressure = await _bme280.ReadPressure();
             var altitude = await _bme280.ReadAltitude(seaLevelPressure);
-            Temp.Text = temp.ToString() + " °C";
-            Humi.Text = humidity.ToString()+ " %";
-            Pres.Text = pressure.ToString()+ " Pa";
-            Alti.Text = altitude.ToString()+ " m";
+            Temp.Text = "Temperature =" + temp.ToString() + " °C";
+            Humi.Text = "Humidity =" + humidity.ToString()+ " %";
+            Pres.Text = "Pressure =" + pressure.ToString()+ " Pa";
+            Alti.Text = "Altitude =" + altitude.ToString()+ " m";
+            
             Debug.WriteLine("Temp: {0} deg C", temp);
             Debug.WriteLine("Humidity: {0} %", humidity);
             Debug.WriteLine("Pressure: {0} Pa", pressure);

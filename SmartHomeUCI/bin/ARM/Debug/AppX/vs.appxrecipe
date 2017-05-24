@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\Ram31\Desktop\Spring 2017\IoT\SmartHomeUCI\SmartHomeUCI\bin\ARM\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-24T22:09:06.408</Modified>
+      <Modified>2017-05-24T22:43:06.365</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Ram31\Desktop\Spring 2017\IoT\SmartHomeUCI\SmartHomeUCI\bin\ARM\Debug\SmartHomeUCI.exe">
       <PackagePath>entrypoint\SmartHomeUCI.exe</PackagePath>
-      <Modified>2017-05-24T22:09:06.102</Modified>
+      <Modified>2017-05-24T22:43:05.569</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\BuildAzure.IoT.Adafruit.BME280\1.0.0.1\lib\uap10.0\BuildAzure.IoT.Adafruit.BME280.dll">
       <PackagePath>BuildAzure.IoT.Adafruit.BME280.dll</PackagePath>
@@ -535,7 +535,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ram31\Desktop\Spring 2017\IoT\SmartHomeUCI\SmartHomeUCI\bin\ARM\Debug\SmartHomeUCI.xr.xml">
       <PackagePath>SmartHomeUCI.xr.xml</PackagePath>
-      <Modified>2017-05-24T22:07:18.837</Modified>
+      <Modified>2017-05-24T22:43:05.212</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.15063.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -544,11 +544,11 @@
     <AppxPackagedFile Include="C:\Users\Ram31\Desktop\Spring 2017\IoT\SmartHomeUCI\SmartHomeUCI\bin\ARM\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-24T22:07:19.482</Modified>
+      <Modified>2017-05-24T22:43:06.130</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ram31\Desktop\Spring 2017\IoT\SmartHomeUCI\SmartHomeUCI\bin\ARM\Debug\Core\SmartHomeUCI.exe">
       <PackagePath>SmartHomeUCI.exe</PackagePath>
-      <Modified>2017-05-24T22:09:06.403</Modified>
+      <Modified>2017-05-24T22:43:06.353</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

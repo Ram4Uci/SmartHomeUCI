@@ -9,7 +9,7 @@ static class AzureIoTHub
     // Note: this connection string is specific to the device "RPI1". To configure other devices,
     // see information on iothub-explorer at http://aka.ms/iothubgetstartedVSCS
     //
-    const string deviceConnectionString = "";
+    const string deviceConnectionString = "HostName=SmartHomeUCI.azure-devices.net;DeviceId=RPI1;SharedAccessKey=eUiJthcaixg6WMcVZEVq3ZF8W2wCykyBNMQXBzQtpcY=";
 
     //
     // To monitor messages sent to device "RPI1" use iothub-explorer as follows:
@@ -18,14 +18,14 @@ static class AzureIoTHub
 
     // Refer to http://aka.ms/azure-iot-hub-vs-cs-wiki for more information on Connected Service for Azure IoT Hub
 
-    public static async Task SendDeviceToCloudMessageAsync()
+    public static async Task SendDeviceToCloudMessageAsync(string text)
     {
         var deviceClient = DeviceClient.CreateFromConnectionString(deviceConnectionString, TransportType.Mqtt);
 
 #if WINDOWS_UWP
-        var str = "{\"deviceId\":\"RPI1\",\"messageId\":1,\"text\":\"Hello, Cloud from a UWP C# app!\"}";
+        var str = "{\"deviceId\":\"RPI1\",\"messageId\":1,\"text\":\""+text+"\"}";
 #else
-        var str = "{\"deviceId\":\"RPI1\",\"messageId\":1,\"text\":\"Hello, Cloud from a C# app!\"}";
+        var str = "{\"deviceId\":\"RPI1\",\"messageId\":1,\"text\":\""+text+"\"}";
 #endif
         var message = new Message(Encoding.ASCII.GetBytes(str));
 

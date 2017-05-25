@@ -19,6 +19,8 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="Text" />
+      <RootProperty Name="Visibility" />
+      <RootEvent Name="DoubleTapped" />
     </RootType>
     <RootType FullName="SmartHomeUCI.MainPage" />
   </Roots.RootTypes>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>WINDOWS-MN1NEBR</Machine>
+    <Machine>RAMPC</Machine>
     <WindowsUser>Ram31</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\Ram31\Desktop\Spring 2017\IoT\SmartHomeUCI\SmartHomeUCI\bin\ARM\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>22B32966D966950B4171B48B47B9D495F9836F9D94C753CB31FF0F3A6EA0F1CA</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>2B074BB15AF9BB23EFB1F4D63EABE930537F4DF7930ACE0453837FF483EF3126</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>0d7dfa13-55f5-4a02-b723-564036b0560a_1.0.0.0_arm__jp31a18z92p22</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>0d7dfa13-55f5-4a02-b723-564036b0560a_jp31a18z92p22!App</RegisteredUserModeAppID>
     <RegisteredPackageID>0d7dfa13-55f5-4a02-b723-564036b0560a</RegisteredPackageID>
@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\Ram31\Desktop\Spring 2017\IoT\SmartHomeUCI\SmartHomeUCI\bin\ARM\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-25T22:11:40.131</Modified>
+      <Modified>2017-06-16T00:15:16.925</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Ram31\Desktop\Spring 2017\IoT\SmartHomeUCI\SmartHomeUCI\bin\ARM\Debug\SmartHomeUCI.exe">
       <PackagePath>entrypoint\SmartHomeUCI.exe</PackagePath>
-      <Modified>2017-05-25T22:11:37.706</Modified>
+      <Modified>2017-06-16T00:15:15.637</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\BuildAzure.IoT.Adafruit.BME280\1.0.0.1\lib\uap10.0\BuildAzure.IoT.Adafruit.BME280.dll">
       <PackagePath>BuildAzure.IoT.Adafruit.BME280.dll</PackagePath>
@@ -71,6 +71,10 @@
       <PackagePath>System.Net.Http.Formatting.dll</PackagePath>
       <Modified>2015-01-28T12:02:42.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Azure.ActiveDirectory.GraphClient\2.1.1\lib\portable-net4+sl5+win+wpa+wp8\Microsoft.Azure.ActiveDirectory.GraphClient.dll">
+      <PackagePath>Microsoft.Azure.ActiveDirectory.GraphClient.dll</PackagePath>
+      <Modified>2016-09-16T00:46:54.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Azure.Amqp\2.0.5\lib\uap10.0\Microsoft.Azure.Amqp.dll">
       <PackagePath>Microsoft.Azure.Amqp.dll</PackagePath>
       <Modified>2017-04-28T19:14:46.000</Modified>
@@ -87,6 +91,126 @@
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
       <Modified>2016-06-12T06:13:10.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Data.Edm\5.6.4\lib\portable-net45+wp8+win8+wpa\Microsoft.Data.Edm.dll">
+      <PackagePath>Microsoft.Data.Edm.dll</PackagePath>
+      <Modified>2015-03-26T08:42:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Data.Edm\5.6.4\lib\portable-net45+wp8+win8+wpa\de\Microsoft.Data.Edm.resources.dll">
+      <PackagePath>de\Microsoft.Data.Edm.resources.dll</PackagePath>
+      <Modified>2015-03-26T08:42:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Data.Edm\5.6.4\lib\portable-net45+wp8+win8+wpa\es\Microsoft.Data.Edm.resources.dll">
+      <PackagePath>es\Microsoft.Data.Edm.resources.dll</PackagePath>
+      <Modified>2015-03-26T08:42:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Data.Edm\5.6.4\lib\portable-net45+wp8+win8+wpa\fr\Microsoft.Data.Edm.resources.dll">
+      <PackagePath>fr\Microsoft.Data.Edm.resources.dll</PackagePath>
+      <Modified>2015-03-26T08:42:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Data.Edm\5.6.4\lib\portable-net45+wp8+win8+wpa\it\Microsoft.Data.Edm.resources.dll">
+      <PackagePath>it\Microsoft.Data.Edm.resources.dll</PackagePath>
+      <Modified>2015-03-26T08:42:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Data.Edm\5.6.4\lib\portable-net45+wp8+win8+wpa\ja\Microsoft.Data.Edm.resources.dll">
+      <PackagePath>ja\Microsoft.Data.Edm.resources.dll</PackagePath>
+      <Modified>2015-03-26T08:42:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Data.Edm\5.6.4\lib\portable-net45+wp8+win8+wpa\ko\Microsoft.Data.Edm.resources.dll">
+      <PackagePath>ko\Microsoft.Data.Edm.resources.dll</PackagePath>
+      <Modified>2015-03-26T08:42:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Data.Edm\5.6.4\lib\portable-net45+wp8+win8+wpa\ru\Microsoft.Data.Edm.resources.dll">
+      <PackagePath>ru\Microsoft.Data.Edm.resources.dll</PackagePath>
+      <Modified>2015-03-26T08:42:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Data.Edm\5.6.4\lib\portable-net45+wp8+win8+wpa\zh-Hans\Microsoft.Data.Edm.resources.dll">
+      <PackagePath>zh-Hans\Microsoft.Data.Edm.resources.dll</PackagePath>
+      <Modified>2015-03-26T08:42:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Data.Edm\5.6.4\lib\portable-net45+wp8+win8+wpa\zh-Hant\Microsoft.Data.Edm.resources.dll">
+      <PackagePath>zh-Hant\Microsoft.Data.Edm.resources.dll</PackagePath>
+      <Modified>2015-03-26T08:42:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Data.OData\5.6.4\lib\portable-net45+wp8+win8+wpa\Microsoft.Data.OData.dll">
+      <PackagePath>Microsoft.Data.OData.dll</PackagePath>
+      <Modified>2015-03-26T08:40:46.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Data.OData\5.6.4\lib\portable-net45+wp8+win8+wpa\de\Microsoft.Data.OData.resources.dll">
+      <PackagePath>de\Microsoft.Data.OData.resources.dll</PackagePath>
+      <Modified>2015-03-26T08:40:48.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Data.OData\5.6.4\lib\portable-net45+wp8+win8+wpa\es\Microsoft.Data.OData.resources.dll">
+      <PackagePath>es\Microsoft.Data.OData.resources.dll</PackagePath>
+      <Modified>2015-03-26T08:40:48.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Data.OData\5.6.4\lib\portable-net45+wp8+win8+wpa\fr\Microsoft.Data.OData.resources.dll">
+      <PackagePath>fr\Microsoft.Data.OData.resources.dll</PackagePath>
+      <Modified>2015-03-26T08:40:48.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Data.OData\5.6.4\lib\portable-net45+wp8+win8+wpa\it\Microsoft.Data.OData.resources.dll">
+      <PackagePath>it\Microsoft.Data.OData.resources.dll</PackagePath>
+      <Modified>2015-03-26T08:40:48.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Data.OData\5.6.4\lib\portable-net45+wp8+win8+wpa\ja\Microsoft.Data.OData.resources.dll">
+      <PackagePath>ja\Microsoft.Data.OData.resources.dll</PackagePath>
+      <Modified>2015-03-26T08:40:48.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Data.OData\5.6.4\lib\portable-net45+wp8+win8+wpa\ko\Microsoft.Data.OData.resources.dll">
+      <PackagePath>ko\Microsoft.Data.OData.resources.dll</PackagePath>
+      <Modified>2015-03-26T08:40:48.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Data.OData\5.6.4\lib\portable-net45+wp8+win8+wpa\ru\Microsoft.Data.OData.resources.dll">
+      <PackagePath>ru\Microsoft.Data.OData.resources.dll</PackagePath>
+      <Modified>2015-03-26T08:40:48.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Data.OData\5.6.4\lib\portable-net45+wp8+win8+wpa\zh-Hans\Microsoft.Data.OData.resources.dll">
+      <PackagePath>zh-Hans\Microsoft.Data.OData.resources.dll</PackagePath>
+      <Modified>2015-03-26T08:40:48.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Data.OData\5.6.4\lib\portable-net45+wp8+win8+wpa\zh-Hant\Microsoft.Data.OData.resources.dll">
+      <PackagePath>zh-Hant\Microsoft.Data.OData.resources.dll</PackagePath>
+      <Modified>2015-03-26T08:40:48.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Data.Services.Client\5.6.4\lib\portable-net45+wp8+win8+wpa\Microsoft.Data.Services.Client.dll">
+      <PackagePath>Microsoft.Data.Services.Client.dll</PackagePath>
+      <Modified>2015-03-26T08:42:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Data.Services.Client\5.6.4\lib\portable-net45+wp8+win8+wpa\de\Microsoft.Data.Services.Client.resources.dll">
+      <PackagePath>de\Microsoft.Data.Services.Client.resources.dll</PackagePath>
+      <Modified>2015-03-26T08:42:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Data.Services.Client\5.6.4\lib\portable-net45+wp8+win8+wpa\es\Microsoft.Data.Services.Client.resources.dll">
+      <PackagePath>es\Microsoft.Data.Services.Client.resources.dll</PackagePath>
+      <Modified>2015-03-26T08:42:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Data.Services.Client\5.6.4\lib\portable-net45+wp8+win8+wpa\fr\Microsoft.Data.Services.Client.resources.dll">
+      <PackagePath>fr\Microsoft.Data.Services.Client.resources.dll</PackagePath>
+      <Modified>2015-03-26T08:42:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Data.Services.Client\5.6.4\lib\portable-net45+wp8+win8+wpa\it\Microsoft.Data.Services.Client.resources.dll">
+      <PackagePath>it\Microsoft.Data.Services.Client.resources.dll</PackagePath>
+      <Modified>2015-03-26T08:42:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Data.Services.Client\5.6.4\lib\portable-net45+wp8+win8+wpa\ja\Microsoft.Data.Services.Client.resources.dll">
+      <PackagePath>ja\Microsoft.Data.Services.Client.resources.dll</PackagePath>
+      <Modified>2015-03-26T08:42:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Data.Services.Client\5.6.4\lib\portable-net45+wp8+win8+wpa\ko\Microsoft.Data.Services.Client.resources.dll">
+      <PackagePath>ko\Microsoft.Data.Services.Client.resources.dll</PackagePath>
+      <Modified>2015-03-26T08:42:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Data.Services.Client\5.6.4\lib\portable-net45+wp8+win8+wpa\ru\Microsoft.Data.Services.Client.resources.dll">
+      <PackagePath>ru\Microsoft.Data.Services.Client.resources.dll</PackagePath>
+      <Modified>2015-03-26T08:42:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Data.Services.Client\5.6.4\lib\portable-net45+wp8+win8+wpa\zh-Hans\Microsoft.Data.Services.Client.resources.dll">
+      <PackagePath>zh-Hans\Microsoft.Data.Services.Client.resources.dll</PackagePath>
+      <Modified>2015-03-26T08:42:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Data.Services.Client\5.6.4\lib\portable-net45+wp8+win8+wpa\zh-Hant\Microsoft.Data.Services.Client.resources.dll">
+      <PackagePath>zh-Hant\Microsoft.Data.Services.Client.resources.dll</PackagePath>
+      <Modified>2015-03-26T08:42:08.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Extensions.DependencyInjection.Abstractions\1.1.0\lib\netstandard1.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll">
       <PackagePath>Microsoft.Extensions.DependencyInjection.Abstractions.dll</PackagePath>
       <Modified>2016-11-15T04:41:28.000</Modified>
@@ -98,6 +222,14 @@
     <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Extensions.Logging.Abstractions\1.1.1\lib\netstandard1.1\Microsoft.Extensions.Logging.Abstractions.dll">
       <PackagePath>Microsoft.Extensions.Logging.Abstractions.dll</PackagePath>
       <Modified>2017-02-18T01:01:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.IdentityModel.Clients.ActiveDirectory\3.13.9\lib\netcore45\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll">
+      <PackagePath>Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll</PackagePath>
+      <Modified>2017-03-22T05:08:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.IdentityModel.Clients.ActiveDirectory\3.13.9\lib\netcore45\Microsoft.IdentityModel.Clients.ActiveDirectory.dll">
+      <PackagePath>Microsoft.IdentityModel.Clients.ActiveDirectory.dll</PackagePath>
+      <Modified>2017-03-22T05:08:50.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Net.Http\2.2.22\lib\win8\System.Net.Http.Extensions.dll">
       <PackagePath>System.Net.Http.Extensions.dll</PackagePath>
@@ -154,6 +286,174 @@
     <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.NETCore.Portable.Compatibility\1.0.2\lib\netcore50\System.dll">
       <PackagePath>System.dll</PackagePath>
       <Modified>2016-07-02T01:10:48.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.OData.Client\6.8.1\lib\portable-net45+wp8+win8+wpa\Microsoft.OData.Client.dll">
+      <PackagePath>Microsoft.OData.Client.dll</PackagePath>
+      <Modified>2014-10-20T16:53:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.OData.Client\6.8.1\lib\portable-net45+wp8+win8+wpa\de\Microsoft.OData.Client.resources.dll">
+      <PackagePath>de\Microsoft.OData.Client.resources.dll</PackagePath>
+      <Modified>2014-10-20T16:53:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.OData.Client\6.8.1\lib\portable-net45+wp8+win8+wpa\es\Microsoft.OData.Client.resources.dll">
+      <PackagePath>es\Microsoft.OData.Client.resources.dll</PackagePath>
+      <Modified>2014-10-20T16:53:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.OData.Client\6.8.1\lib\portable-net45+wp8+win8+wpa\fr\Microsoft.OData.Client.resources.dll">
+      <PackagePath>fr\Microsoft.OData.Client.resources.dll</PackagePath>
+      <Modified>2014-10-20T16:53:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.OData.Client\6.8.1\lib\portable-net45+wp8+win8+wpa\it\Microsoft.OData.Client.resources.dll">
+      <PackagePath>it\Microsoft.OData.Client.resources.dll</PackagePath>
+      <Modified>2014-10-20T16:53:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.OData.Client\6.8.1\lib\portable-net45+wp8+win8+wpa\ja\Microsoft.OData.Client.resources.dll">
+      <PackagePath>ja\Microsoft.OData.Client.resources.dll</PackagePath>
+      <Modified>2014-10-20T16:53:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.OData.Client\6.8.1\lib\portable-net45+wp8+win8+wpa\ko\Microsoft.OData.Client.resources.dll">
+      <PackagePath>ko\Microsoft.OData.Client.resources.dll</PackagePath>
+      <Modified>2014-10-20T16:53:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.OData.Client\6.8.1\lib\portable-net45+wp8+win8+wpa\ru\Microsoft.OData.Client.resources.dll">
+      <PackagePath>ru\Microsoft.OData.Client.resources.dll</PackagePath>
+      <Modified>2014-10-20T16:53:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.OData.Client\6.8.1\lib\portable-net45+wp8+win8+wpa\zh-Hans\Microsoft.OData.Client.resources.dll">
+      <PackagePath>zh-Hans\Microsoft.OData.Client.resources.dll</PackagePath>
+      <Modified>2014-10-20T16:53:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.OData.Client\6.8.1\lib\portable-net45+wp8+win8+wpa\zh-Hant\Microsoft.OData.Client.resources.dll">
+      <PackagePath>zh-Hant\Microsoft.OData.Client.resources.dll</PackagePath>
+      <Modified>2014-10-20T16:53:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.OData.Core\6.8.1\lib\portable-net40+sl5+wp8+win8+wpa\Microsoft.OData.Core.dll">
+      <PackagePath>Microsoft.OData.Core.dll</PackagePath>
+      <Modified>2014-10-20T16:53:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.OData.Core\6.8.1\lib\portable-net40+sl5+wp8+win8+wpa\de\Microsoft.OData.Core.resources.dll">
+      <PackagePath>de\Microsoft.OData.Core.resources.dll</PackagePath>
+      <Modified>2014-10-20T16:53:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.OData.Core\6.8.1\lib\portable-net40+sl5+wp8+win8+wpa\es\Microsoft.OData.Core.resources.dll">
+      <PackagePath>es\Microsoft.OData.Core.resources.dll</PackagePath>
+      <Modified>2014-10-20T16:53:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.OData.Core\6.8.1\lib\portable-net40+sl5+wp8+win8+wpa\fr\Microsoft.OData.Core.resources.dll">
+      <PackagePath>fr\Microsoft.OData.Core.resources.dll</PackagePath>
+      <Modified>2014-10-20T16:53:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.OData.Core\6.8.1\lib\portable-net40+sl5+wp8+win8+wpa\it\Microsoft.OData.Core.resources.dll">
+      <PackagePath>it\Microsoft.OData.Core.resources.dll</PackagePath>
+      <Modified>2014-10-20T16:53:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.OData.Core\6.8.1\lib\portable-net40+sl5+wp8+win8+wpa\ja\Microsoft.OData.Core.resources.dll">
+      <PackagePath>ja\Microsoft.OData.Core.resources.dll</PackagePath>
+      <Modified>2014-10-20T16:53:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.OData.Core\6.8.1\lib\portable-net40+sl5+wp8+win8+wpa\ko\Microsoft.OData.Core.resources.dll">
+      <PackagePath>ko\Microsoft.OData.Core.resources.dll</PackagePath>
+      <Modified>2014-10-20T16:53:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.OData.Core\6.8.1\lib\portable-net40+sl5+wp8+win8+wpa\ru\Microsoft.OData.Core.resources.dll">
+      <PackagePath>ru\Microsoft.OData.Core.resources.dll</PackagePath>
+      <Modified>2014-10-20T16:53:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.OData.Core\6.8.1\lib\portable-net40+sl5+wp8+win8+wpa\zh-Hans\Microsoft.OData.Core.resources.dll">
+      <PackagePath>zh-Hans\Microsoft.OData.Core.resources.dll</PackagePath>
+      <Modified>2014-10-20T16:53:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.OData.Core\6.8.1\lib\portable-net40+sl5+wp8+win8+wpa\zh-Hant\Microsoft.OData.Core.resources.dll">
+      <PackagePath>zh-Hant\Microsoft.OData.Core.resources.dll</PackagePath>
+      <Modified>2014-10-20T16:53:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.OData.Edm\6.8.1\lib\portable-net40+sl5+wp8+win8+wpa\Microsoft.OData.Edm.dll">
+      <PackagePath>Microsoft.OData.Edm.dll</PackagePath>
+      <Modified>2014-10-20T16:52:58.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.OData.Edm\6.8.1\lib\portable-net40+sl5+wp8+win8+wpa\de\Microsoft.OData.Edm.resources.dll">
+      <PackagePath>de\Microsoft.OData.Edm.resources.dll</PackagePath>
+      <Modified>2014-10-20T16:52:58.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.OData.Edm\6.8.1\lib\portable-net40+sl5+wp8+win8+wpa\es\Microsoft.OData.Edm.resources.dll">
+      <PackagePath>es\Microsoft.OData.Edm.resources.dll</PackagePath>
+      <Modified>2014-10-20T16:52:58.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.OData.Edm\6.8.1\lib\portable-net40+sl5+wp8+win8+wpa\fr\Microsoft.OData.Edm.resources.dll">
+      <PackagePath>fr\Microsoft.OData.Edm.resources.dll</PackagePath>
+      <Modified>2014-10-20T16:52:58.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.OData.Edm\6.8.1\lib\portable-net40+sl5+wp8+win8+wpa\it\Microsoft.OData.Edm.resources.dll">
+      <PackagePath>it\Microsoft.OData.Edm.resources.dll</PackagePath>
+      <Modified>2014-10-20T16:52:58.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.OData.Edm\6.8.1\lib\portable-net40+sl5+wp8+win8+wpa\ja\Microsoft.OData.Edm.resources.dll">
+      <PackagePath>ja\Microsoft.OData.Edm.resources.dll</PackagePath>
+      <Modified>2014-10-20T16:52:58.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.OData.Edm\6.8.1\lib\portable-net40+sl5+wp8+win8+wpa\ko\Microsoft.OData.Edm.resources.dll">
+      <PackagePath>ko\Microsoft.OData.Edm.resources.dll</PackagePath>
+      <Modified>2014-10-20T16:52:58.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.OData.Edm\6.8.1\lib\portable-net40+sl5+wp8+win8+wpa\ru\Microsoft.OData.Edm.resources.dll">
+      <PackagePath>ru\Microsoft.OData.Edm.resources.dll</PackagePath>
+      <Modified>2014-10-20T16:52:58.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.OData.Edm\6.8.1\lib\portable-net40+sl5+wp8+win8+wpa\zh-Hans\Microsoft.OData.Edm.resources.dll">
+      <PackagePath>zh-Hans\Microsoft.OData.Edm.resources.dll</PackagePath>
+      <Modified>2014-10-20T16:52:58.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.OData.Edm\6.8.1\lib\portable-net40+sl5+wp8+win8+wpa\zh-Hant\Microsoft.OData.Edm.resources.dll">
+      <PackagePath>zh-Hant\Microsoft.OData.Edm.resources.dll</PackagePath>
+      <Modified>2014-10-20T16:52:58.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Office365.Discovery\1.0.22\lib\portable-net40+sl5+wp8+win8+MonoAndroid10+MonoTouch10+WindowsPhoneApp81\Microsoft.Office365.Discovery.dll">
+      <PackagePath>Microsoft.Office365.Discovery.dll</PackagePath>
+      <Modified>2014-10-29T18:22:46.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Office365.SharePoint\1.0.22\lib\portable-net40+sl5+wp8+win8+MonoAndroid10+MonoTouch10+WindowsPhoneApp81\Microsoft.Office365.SharePoint.Portable.dll">
+      <PackagePath>Microsoft.Office365.SharePoint.Portable.dll</PackagePath>
+      <Modified>2014-10-29T18:22:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Spatial\6.8.1\lib\portable-net40+sl5+wp8+win8+wpa\Microsoft.Spatial.dll">
+      <PackagePath>Microsoft.Spatial.dll</PackagePath>
+      <Modified>2014-10-20T16:53:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Spatial\6.8.1\lib\portable-net40+sl5+wp8+win8+wpa\de\Microsoft.Spatial.resources.dll">
+      <PackagePath>de\Microsoft.Spatial.resources.dll</PackagePath>
+      <Modified>2014-10-20T16:53:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Spatial\6.8.1\lib\portable-net40+sl5+wp8+win8+wpa\es\Microsoft.Spatial.resources.dll">
+      <PackagePath>es\Microsoft.Spatial.resources.dll</PackagePath>
+      <Modified>2014-10-20T16:53:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Spatial\6.8.1\lib\portable-net40+sl5+wp8+win8+wpa\fr\Microsoft.Spatial.resources.dll">
+      <PackagePath>fr\Microsoft.Spatial.resources.dll</PackagePath>
+      <Modified>2014-10-20T16:53:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Spatial\6.8.1\lib\portable-net40+sl5+wp8+win8+wpa\it\Microsoft.Spatial.resources.dll">
+      <PackagePath>it\Microsoft.Spatial.resources.dll</PackagePath>
+      <Modified>2014-10-20T16:53:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Spatial\6.8.1\lib\portable-net40+sl5+wp8+win8+wpa\ja\Microsoft.Spatial.resources.dll">
+      <PackagePath>ja\Microsoft.Spatial.resources.dll</PackagePath>
+      <Modified>2014-10-20T16:53:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Spatial\6.8.1\lib\portable-net40+sl5+wp8+win8+wpa\ko\Microsoft.Spatial.resources.dll">
+      <PackagePath>ko\Microsoft.Spatial.resources.dll</PackagePath>
+      <Modified>2014-10-20T16:53:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Spatial\6.8.1\lib\portable-net40+sl5+wp8+win8+wpa\ru\Microsoft.Spatial.resources.dll">
+      <PackagePath>ru\Microsoft.Spatial.resources.dll</PackagePath>
+      <Modified>2014-10-20T16:53:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Spatial\6.8.1\lib\portable-net40+sl5+wp8+win8+wpa\zh-Hans\Microsoft.Spatial.resources.dll">
+      <PackagePath>zh-Hans\Microsoft.Spatial.resources.dll</PackagePath>
+      <Modified>2014-10-20T16:53:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.Spatial\6.8.1\lib\portable-net40+sl5+wp8+win8+wpa\zh-Hant\Microsoft.Spatial.resources.dll">
+      <PackagePath>zh-Hant\Microsoft.Spatial.resources.dll</PackagePath>
+      <Modified>2014-10-20T16:53:02.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\Microsoft.VisualBasic\10.0.1\lib\netcore50\Microsoft.VisualBasic.dll">
       <PackagePath>Microsoft.VisualBasic.dll</PackagePath>
@@ -543,6 +843,46 @@
       <PackagePath>System.ServiceModel.Security.dll</PackagePath>
       <Modified>2016-06-14T04:51:36.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\System.Spatial\5.6.4\lib\portable-net45+wp8+win8+wpa\System.Spatial.dll">
+      <PackagePath>System.Spatial.dll</PackagePath>
+      <Modified>2015-03-26T08:42:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\System.Spatial\5.6.4\lib\portable-net45+wp8+win8+wpa\de\System.Spatial.resources.dll">
+      <PackagePath>de\System.Spatial.resources.dll</PackagePath>
+      <Modified>2015-03-26T08:42:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\System.Spatial\5.6.4\lib\portable-net45+wp8+win8+wpa\es\System.Spatial.resources.dll">
+      <PackagePath>es\System.Spatial.resources.dll</PackagePath>
+      <Modified>2015-03-26T08:42:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\System.Spatial\5.6.4\lib\portable-net45+wp8+win8+wpa\fr\System.Spatial.resources.dll">
+      <PackagePath>fr\System.Spatial.resources.dll</PackagePath>
+      <Modified>2015-03-26T08:42:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\System.Spatial\5.6.4\lib\portable-net45+wp8+win8+wpa\it\System.Spatial.resources.dll">
+      <PackagePath>it\System.Spatial.resources.dll</PackagePath>
+      <Modified>2015-03-26T08:42:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\System.Spatial\5.6.4\lib\portable-net45+wp8+win8+wpa\ja\System.Spatial.resources.dll">
+      <PackagePath>ja\System.Spatial.resources.dll</PackagePath>
+      <Modified>2015-03-26T08:42:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\System.Spatial\5.6.4\lib\portable-net45+wp8+win8+wpa\ko\System.Spatial.resources.dll">
+      <PackagePath>ko\System.Spatial.resources.dll</PackagePath>
+      <Modified>2015-03-26T08:42:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\System.Spatial\5.6.4\lib\portable-net45+wp8+win8+wpa\ru\System.Spatial.resources.dll">
+      <PackagePath>ru\System.Spatial.resources.dll</PackagePath>
+      <Modified>2015-03-26T08:42:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\System.Spatial\5.6.4\lib\portable-net45+wp8+win8+wpa\zh-Hans\System.Spatial.resources.dll">
+      <PackagePath>zh-Hans\System.Spatial.resources.dll</PackagePath>
+      <Modified>2015-03-26T08:42:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\System.Spatial\5.6.4\lib\portable-net45+wp8+win8+wpa\zh-Hant\System.Spatial.resources.dll">
+      <PackagePath>zh-Hant\System.Spatial.resources.dll</PackagePath>
+      <Modified>2015-03-26T08:42:02.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ram31\.nuget\packages\System.Text.Encoding.CodePages\4.0.1\runtimes\win\lib\netstandard1.3\System.Text.Encoding.CodePages.dll">
       <PackagePath>System.Text.Encoding.CodePages.dll</PackagePath>
       <Modified>2016-06-12T06:14:46.000</Modified>
@@ -591,6 +931,30 @@
       <PackagePath>Validation.dll</PackagePath>
       <Modified>2017-03-15T04:41:02.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\Desktop\Spring 2017\IoT\SmartHomeUCI\SmartHomeUCI\Assets\Cloudy_weather.jpg">
+      <PackagePath>Assets\Cloudy_weather.jpg</PackagePath>
+      <Modified>2017-06-06T07:24:10.161</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\Desktop\Spring 2017\IoT\SmartHomeUCI\SmartHomeUCI\Assets\Day_Home.jpg">
+      <PackagePath>Assets\Day_Home.jpg</PackagePath>
+      <Modified>2017-06-06T07:28:21.976</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\Desktop\Spring 2017\IoT\SmartHomeUCI\SmartHomeUCI\Assets\Energy.jpg">
+      <PackagePath>Assets\Energy.jpg</PackagePath>
+      <Modified>2017-06-15T19:11:41.862</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\Desktop\Spring 2017\IoT\SmartHomeUCI\SmartHomeUCI\Assets\Night_Home.jpg">
+      <PackagePath>Assets\Night_Home.jpg</PackagePath>
+      <Modified>2017-06-06T08:49:12.411</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\Desktop\Spring 2017\IoT\SmartHomeUCI\SmartHomeUCI\Assets\Rainy_weather.jpg">
+      <PackagePath>Assets\Rainy_weather.jpg</PackagePath>
+      <Modified>2017-06-06T07:24:57.449</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ram31\Desktop\Spring 2017\IoT\SmartHomeUCI\SmartHomeUCI\Assets\Sunny_weather.jpg">
+      <PackagePath>Assets\Sunny_weather.jpg</PackagePath>
+      <Modified>2017-06-06T07:22:30.138</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ram31\Desktop\Spring 2017\IoT\SmartHomeUCI\SmartHomeUCI\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2017-05-24T21:41:26.350</Modified>
@@ -631,7 +995,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ram31\Desktop\Spring 2017\IoT\SmartHomeUCI\SmartHomeUCI\bin\ARM\Debug\SmartHomeUCI.xr.xml">
       <PackagePath>SmartHomeUCI.xr.xml</PackagePath>
-      <Modified>2017-05-25T21:48:18.616</Modified>
+      <Modified>2017-06-15T22:58:31.259</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.15063.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -640,11 +1004,11 @@
     <AppxPackagedFile Include="C:\Users\Ram31\Desktop\Spring 2017\IoT\SmartHomeUCI\SmartHomeUCI\bin\ARM\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-25T22:11:39.519</Modified>
+      <Modified>2017-06-16T00:15:16.610</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ram31\Desktop\Spring 2017\IoT\SmartHomeUCI\SmartHomeUCI\bin\ARM\Debug\Core\SmartHomeUCI.exe">
       <PackagePath>SmartHomeUCI.exe</PackagePath>
-      <Modified>2017-05-25T22:11:40.123</Modified>
+      <Modified>2017-06-16T00:15:16.922</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

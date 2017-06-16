@@ -1,10 +1,16 @@
 WinMetadata\Windows.winmd
+Assets\Cloudy_weather.jpg
+Assets\Day_Home.jpg
+Assets\Energy.jpg
 Assets\LockScreenLogo.scale-200.png
+Assets\Night_Home.jpg
+Assets\Rainy_weather.jpg
 Assets\SplashScreen.scale-200.png
 Assets\Square150x150Logo.scale-200.png
 Assets\Square44x44Logo.scale-200.png
 Assets\Square44x44Logo.targetsize-24_altform-unplated.png
 Assets\StoreLogo.png
+Assets\Sunny_weather.jpg
 Assets\Wide310x150Logo.scale-200.png
 SmartHomeUCI.xr.xml
 Properties\Default.rd.xml

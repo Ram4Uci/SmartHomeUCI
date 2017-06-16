@@ -4,5 +4,10 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:SmartHomeUCI"
     RequestedTheme="Light">
+    <Application.Resources>
+        <x:String x:Key="ida:ClientId">417e694a-0516-4798-b299-82fec0e5b0cb</x:String>
+        <x:String x:Key="ida:AADInstance">https://login.microsoftonline.com/</x:String>
+        <x:String x:Key="ida:Domain">personalmicrosoftsoftware.onmicrosoft.com</x:String>
+    </Application.Resources>
 
 </Application>

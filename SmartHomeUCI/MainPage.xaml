@@ -7,15 +7,33 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="Black" >
-        <TextBlock x:Name="Temp" Foreground="Blue" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,800,400" TextWrapping="Wrap" Text="Temperature" Visibility="Visible" DoubleTapped="TempClick"/>
-        <TextBlock x:Name="TempF" Foreground="Blue" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="350,0,800,400" TextWrapping="Wrap" Text=" °F" Visibility="Collapsed"/>
-        <TextBlock x:Name="TempC" Foreground="Blue" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="350,0,800,400" TextWrapping="Wrap" Text=" °C" Visibility="Visible"/>
-        <TextBlock x:Name="Humi" Foreground="White" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,400,800,0" TextWrapping="Wrap" Text="Humidity"/>
-        <TextBlock x:Name="Pres" Foreground="Green" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="800,0,0,400" TextWrapping="Wrap" Text="Pressure"/>
-        <TextBlock x:Name="Alti" Foreground="Yellow" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="800,400,0,0" TextWrapping="Wrap" Text="Altitude" DoubleTapped="AltiClick"/>
-        <TextBlock x:Name="AltiF" Foreground="Yellow" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="800,400,-350,0" TextWrapping="Wrap" Text=" ft" Visibility="Collapsed"/>
-        <TextBlock x:Name="AltiM" Foreground="Yellow" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="800,400,-350,0" TextWrapping="Wrap" Text=" m" Visibility="Visible"/>
-
+    <Grid x:Name="Main">
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets/Day_Home.jpg"/>
+        </Grid.Background>
+        <StackPanel Margin="0,50,0,0">
+            <TextBlock x:Name="Welcome" Text="Good Afternoon" HorizontalAlignment="Center" FontSize="40" FontWeight="SemiBold" FontFamily="Segoe UI" Foreground="White"/>
+            <TextBlock x:Name="User" Text="Ram" HorizontalAlignment="Center" FontSize="35" FontWeight="SemiBold" Foreground="White" />
+            <TextBlock x:Name="Temp" Text="Temp" HorizontalAlignment="Center" FontSize="30" FontFamily="Consolas" Foreground="White" />
+            <TextBlock x:Name="Time" Text="Time" HorizontalAlignment="Center" FontSize="30" Foreground="White"/>
+            <TextBlock x:Name="Temp1" Text="Temp1" HorizontalAlignment="Center" FontSize="30" Foreground="White"/>
+            <TextBlock x:Name="Value" Text="75 °F" HorizontalAlignment="Center" FontSize="30" Foreground="Black" Margin="0,50,0,0" FontWeight="Bold" />
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,30,0,0">
+                <TextBlock x:Name="LowTemp" Text="60 °F" FontSize="30" Foreground="White" VerticalAlignment="Center" />
+                <local:Dial x:Name="Dial" Height="250" Width="250" Minimum="0.1" Maximum="180.0" VerticalAlignment="Center" Foreground="#FFF7F9F8" Visibility="Visible">
+                    <local:Dial.Knob>
+                        <Grid>
+                            <Ellipse Fill="Black" Opacity="0.6"/>
+                            <Rectangle Height="40" Width="150" Margin="0,0,150,0" RadiusX="20" RadiusY="20" Fill="White"/>
+                        </Grid>
+                    </local:Dial.Knob>
+                </local:Dial>
+                <TextBlock x:Name="HighTemp" Text="90 °F" FontSize="30" Foreground="White" VerticalAlignment="Center"/>
+            </StackPanel>
+            <Grid>
+                <Button x:Name="Weather" Content="Weather" FontSize="30" Foreground="White" Background="Black" HorizontalAlignment="Left" Margin="100,0,0,0" VerticalAlignment="Stretch" Click="Weather_Click"  />
+                <Button x:Name="Energy" Content="Energy" FontSize="30" Foreground="White" Background="Black"  HorizontalAlignment="Right" Margin="0,0,100,0" Click="Energy_Click" />
+            </Grid>
+        </StackPanel>
     </Grid>
 </Page>

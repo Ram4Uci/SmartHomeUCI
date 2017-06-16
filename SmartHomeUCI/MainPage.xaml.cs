@@ -3,7 +3,12 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Json;
+using System.Text;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -12,7 +17,10 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
+using System.Threading.Tasks;
+using Windows.Devices.Gpio;
 
 
 
@@ -20,98 +28,245 @@ using Windows.UI.Xaml.Navigation;
 
 namespace SmartHomeUCI
 {
-    
+
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
     public sealed partial class MainPage : Page
     {
+
+        public static int prevHour=0;
+        public int count = 0;
+        DateTime localDate = DateTime.Now;
+        Windows.Storage.StorageFolder storageFolder =
+        Windows.Storage.ApplicationData.Current.LocalFolder;
+        Windows.Storage.StorageFile TempFile;
         DispatcherTimer _timer;
-        
-        const float seaLevelPressure = 1022.00f;
-        BuildAzure.IoT.Adafruit.BME280.BME280Sensor _bme280;
+        public static double optimal_temp;
+        double out_temp, in_temp;
+        Adc temp = new Adc();
+        StringTable content = new StringTable();
+        List<string> content_list = new List<string>();
+        Temperature Main_Temp = new Temperature();
+        public GpioPin Fan_pin,Window_pin,User_pin;
+
+
+
         public MainPage()
         {
             this.InitializeComponent();
-           
-        }
-        protected override async void OnNavigatedTo(NavigationEventArgs e)
-        {
-            base.OnNavigatedTo(e);
+            CreateFile();
 
+
+        }
+       
+        private async void CreateFile()
+        {
+            TempFile = await storageFolder.CreateFileAsync("Weather.json", Windows.Storage.CreationCollisionOption.OpenIfExists);
             _timer = new DispatcherTimer();
             _timer.Interval = TimeSpan.FromSeconds(1);
-            _timer.Tick += ReadSensor;
-            _bme280 = new BuildAzure.IoT.Adafruit.BME280.BME280Sensor();
-            await _bme280.Initialize();
-           
+            _timer.Tick += GetWeatherData;
+            int hour = localDate.Hour;
+            Debug.WriteLine(hour);
+            Init_Values();
+            RequestResponse.InvokeRequestResponseService(content_list).Wait();
+            Main_Temp.Init_Temp();
+            var gpio = GpioController.GetDefault();
+            Fan_pin=gpio.OpenPin(27);
+            Window_pin=gpio.OpenPin(22);
+            User_pin = gpio.OpenPin(24);
+            SetBg(hour);
+            
             _timer.Start();
-
         }
-        private double F(double temp) { return Math.Round(((9.0 / 5.0) * temp + 32),5); }
-        private double H(double alti) {  return Math.Round((3.2808 * alti),4); }
-        private async void ReadSensor(object sender,object e)
+        private void Init_Values()
         {
-            var temp = await _bme280.ReadTemperature();
-            var humidity = await _bme280.ReadHumidity();
-            var pressure = await _bme280.ReadPressure();
-            var altitude = await _bme280.ReadAltitude(seaLevelPressure);
-            if (TempC.Visibility == Visibility.Visible)
-                Temp.Text = "Temperature =" + temp.ToString();
-            else
-                Temp.Text = "Temperature =" + F(temp).ToString();
-            Humi.Text = "Humidity =" + humidity.ToString()+ " %";
-            Pres.Text = "Pressure =" + pressure.ToString()+ " Pa";
-            if (AltiM.Visibility == Visibility.Visible)
-                Alti.Text = "Altitude =" + altitude.ToString();
-            else
-                Alti.Text = "Altitude =" + H(altitude).ToString();
-           // await AzureIoTHub.SendDeviceToCloudMessageAsync(Temp.Text);
-           // await AzureIoTHub.SendDeviceToCloudMessageAsync(Pres.Text);
-           // await AzureIoTHub.SendDeviceToCloudMessageAsync(Humi.Text);
-           // await AzureIoTHub.SendDeviceToCloudMessageAsync(Alti.Text);
-
-            Debug.WriteLine("Temp: {0} deg C", temp);
-            Debug.WriteLine("Humidity: {0} %", humidity);
-            Debug.WriteLine("Pressure: {0} Pa", pressure);
-            Debug.WriteLine("Altitude: {0} m", altitude);
+            content_list.Clear();
+            content_list.Add(DateTime.Now.Date.ToString("dd/MM/yyyy"));
+            Debug.WriteLine(content_list[0]);
+            content_list.Add(DateTime.Now.ToString("HH:mm:ss"));
+            Debug.WriteLine(content_list[1]);
+            content_list.Add("20");
+            content_list.Add("22");
+            content_list.Add("40");
+            content_list.Add("10");
+            content_list.Add("25");
+            content_list.Add("45");
+            content_list.Add(((int)DateTime.Now.DayOfWeek).ToString());
+            Debug.WriteLine(content_list[8]);
+            content_list.Add("27");
+           
         }
-        
-        private void TempClick(object sender, DoubleTappedRoutedEventArgs e)
+        private void SetBg(int hour)
         {
-
-            if (TempF.Visibility == Visibility.Collapsed)
+            if (hour < 6 || hour > 18)
             {
-                TempC.Visibility = Visibility.Collapsed;
-                TempF.Visibility = Visibility.Visible;
-                ReadSensor(sender, e);
+                Main.Background = new ImageBrush { ImageSource = new BitmapImage(new Uri(this.BaseUri, "Assets/Night_Home.jpg")), Stretch = Stretch.Fill };
             }
             else
             {
-                TempF.Visibility = Visibility.Collapsed;
-                TempC.Visibility = Visibility.Visible;
-                ReadSensor(sender, e);
-
+                Main.Background = new ImageBrush { ImageSource = new BitmapImage(new Uri(this.BaseUri, "Assets/Day_Home.jpg")), Stretch = Stretch.Fill };
             }
-
         }
-
-        private void AltiClick(object sender, DoubleTappedRoutedEventArgs e)
+        private void SetMessage(int hour)
         {
-            if (AltiF.Visibility == Visibility.Collapsed)
+            SetBg(hour);
+            if(hour < 6)
             {
-                AltiM.Visibility = Visibility.Collapsed;
-                AltiF.Visibility = Visibility.Visible;
-                ReadSensor(sender, e);
+                Welcome.Text = "Good Night";
+                Welcome.Foreground = new SolidColorBrush(Windows.UI.Colors.White);
+                User.Foreground = new SolidColorBrush(Windows.UI.Colors.White);
+                Temp.Foreground = new SolidColorBrush(Windows.UI.Colors.White);
+                Time.Foreground = new SolidColorBrush(Windows.UI.Colors.White);
+                Value.Foreground = new SolidColorBrush(Windows.UI.Colors.White);
+                LowTemp.Foreground = new SolidColorBrush(Windows.UI.Colors.White);
+                HighTemp.Foreground = new SolidColorBrush(Windows.UI.Colors.White);
+
+            }
+            else if ( hour < 12)
+            {
+                Welcome.Text = "Good Morning";
+                Welcome.Foreground = new SolidColorBrush(Windows.UI.Colors.Black);
+                User.Foreground = new SolidColorBrush(Windows.UI.Colors.Black);
+                Temp.Foreground = new SolidColorBrush(Windows.UI.Colors.Black);
+                Time.Foreground = new SolidColorBrush(Windows.UI.Colors.Black);
+                Value.Foreground = new SolidColorBrush(Windows.UI.Colors.White);
+                LowTemp.Foreground = new SolidColorBrush(Windows.UI.Colors.White);
+                HighTemp.Foreground = new SolidColorBrush(Windows.UI.Colors.White);
+            }
+            else if(hour < 18)
+            {
+                Welcome.Text = "Good Afternoon";
+                Welcome.Foreground = new SolidColorBrush(Windows.UI.Colors.Black);
+                User.Foreground = new SolidColorBrush(Windows.UI.Colors.Black);
+                Temp.Foreground = new SolidColorBrush(Windows.UI.Colors.Black);
+                Time.Foreground = new SolidColorBrush(Windows.UI.Colors.Black);
+                Value.Foreground = new SolidColorBrush(Windows.UI.Colors.Black);
+                LowTemp.Foreground = new SolidColorBrush(Windows.UI.Colors.White);
+                HighTemp.Foreground = new SolidColorBrush(Windows.UI.Colors.White);
             }
             else
             {
-                AltiF.Visibility = Visibility.Collapsed;
-                AltiM.Visibility = Visibility.Visible;
-                ReadSensor(sender, e);
+                Welcome.Text = "Good Evening";
+                Welcome.Foreground = new SolidColorBrush(Windows.UI.Colors.White);
+                User.Foreground = new SolidColorBrush(Windows.UI.Colors.White);
+                Temp.Foreground = new SolidColorBrush(Windows.UI.Colors.White);
+                Time.Foreground = new SolidColorBrush(Windows.UI.Colors.White);
+                Value.Foreground = new SolidColorBrush(Windows.UI.Colors.White);
+                LowTemp.Foreground = new SolidColorBrush(Windows.UI.Colors.White);
+                HighTemp.Foreground = new SolidColorBrush(Windows.UI.Colors.White);
 
             }
+        }
+
+        double DegToTemp(double deg)
+        {
+            return (Math.Round(60 + (deg / 6.0)));
+        }
+            private double F(double temp) { return Math.Round(((9.0 / 5.0) * temp + 32), 5); }
+            private double C(double temp) { return Math.Round((temp - 32)*(5.0/9.0), 5); }
+
+
+            private async void GetWeatherData(object sender,object e)
+        {
+            int zipcode = 92612;
+            DateTime localTime = DateTime.Now;
+                
+                if (localTime.Minute % 15 == 0 || count ==0)
+                {
+                    RootObject myWeather = await OpenWeatherMapProxy.GetWeather(zipcode);
+                    Temp.Text = myWeather.main.temp.ToString() + "°F";
+                    out_temp = myWeather.main.temp;
+                   
+                    var serializer = new DataContractJsonSerializer(typeof(RootObject));
+                    using (var stream = await storageFolder.OpenStreamForWriteAsync("Weather.json",Windows.Storage.CreationCollisionOption.ReplaceExisting))
+                    {
+                       serializer.WriteObject(stream,myWeather);
+                    }
+                content_list.Clear();
+                content_list.Add(DateTime.Now.Date.ToString("dd/MM/yyyy"));
+                content_list.Add(DateTime.Now.ToString("HH:mm:ss"));
+                content_list.Add(Main_Temp.In_Temp[0].ToString());
+                content_list.Add(C(myWeather.main.temp).ToString());
+                content_list.Add(Main_Temp.In_Temp[1].ToString());
+                content_list.Add("0");
+                content_list.Add(C(myWeather.main.temp).ToString());
+                content_list.Add(myWeather.main.humidity.ToString());
+                content_list.Add(((int)DateTime.Now.DayOfWeek).ToString());
+                content_list.Add(DegToTemp(Math.Round(Dial.Value)).ToString());
+                RequestResponse.InvokeRequestResponseService(content_list).Wait();
+                Temp1.Text = Temperature.temp_optimal;
+                count = 1;
+                }
+                else
+                {
+                try
+                {
+                    var serializer = new DataContractJsonSerializer(typeof(RootObject));
+                    using (var stream = await storageFolder.OpenStreamForReadAsync("Weather.json"))
+                    {
+                        RootObject myWeather = (RootObject)serializer.ReadObject(stream);
+                        Temp.Text = myWeather.main.temp.ToString() + "°F";
+                       
+                    }
+                }
+                catch
+                {
+                    Debug.WriteLine("Exception");
+                }
+                }
+                if(prevHour != localTime.Hour)
+                {
+                SetMessage(localTime.Hour);
+               // Debug.WriteLine(localTime.Hour);
+                prevHour = localTime.Hour;
+                }
+            Time.Text = localTime.ToString("ddd,MM/dd hh:mm tt");
+            Value.Text = DegToTemp(Math.Round(Dial.Value)).ToString();
+            if (User_pin.Read() == GpioPinValue.High)
+            {
+                if (out_temp < optimal_temp)
+                {
+                    if (out_temp < Main_Temp.In_Temp[0])
+                    {
+                        Window_pin.Write(GpioPinValue.Low);
+                    }
+                    else if (Window_pin.Read() == GpioPinValue.Low)
+                    {
+                        Window_pin.Write(GpioPinValue.High);
+                    }
+
+                }
+                else
+                {
+                    if (Main_Temp.In_Temp[0] > optimal_temp)
+                    {
+                        Fan_pin.Write(GpioPinValue.Low);
+                    }
+                    else if (Fan_pin.Read() == GpioPinValue.Low)
+                    {
+                        Fan_pin.Write(GpioPinValue.High);
+                    }
+
+                }
+            }
+            //temp.ReadPin();
+            //emp1.Text = temp.temp.ToString();
+            Debug.WriteLine("ok");
+            
+
 
         }
-    }
+
+        private void Energy_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Energy));
+        }
+
+        private void Weather_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(BlankPage1));
+        }
+    } 
+
 }
